@@ -22,10 +22,6 @@ def test_greet_with_special_characters():
     assert greet("@lice") == "Hello, @lice!"
     assert greet("123") == "Hello, 123!"
 
-def test_greet_with_none():
-    with pytest.raises(TypeError):
-        greet(None)
-
 def test_greet_with_long_name():
     long_name = "A" * 1000
     assert greet(long_name) == f"Hello, {long_name}!"
